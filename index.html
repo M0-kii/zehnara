@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7255db">
+  <meta name="description" content="ذهنت را با ۲۰ پرسش تصویری، عددی و منطقی به چالش بکش. یک آزمون تمرینی رایگان به فارسی و انگلیسی.">
+  <title>ذهن‌آرا | آزمون هوش و منطق</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="questions.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">رفتن به محتوا</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" id="brand-link" aria-label="ذهن‌آرا">
+      <svg class="brand-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M4 4h12v12H4zM20 4h12v12H20zM4 20h12v12H4z" fill="currentColor"/><path d="m25.5 18 8.5 8.5-8.5 8.5-8.5-8.5z" fill="currentColor" opacity=".5"/></svg>
+      <span data-i18n="brand">ذهن‌آرا</span>
+    </a>
+    <nav class="main-nav" aria-label="منوی اصلی" data-i18n-aria="nav">
+      <a href="#discover" data-i18n="navTest">درباره آزمون</a>
+      <a href="#how-it-works" data-i18n="navHow">چطور کار می‌کند؟</a>
+      <a href="#faq" data-i18n="navFaq">سوالات متداول</a>
+    </nav>
+    <button class="language-button" id="language-button" aria-label="Switch to English"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span>English</span></button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="home-view">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="hero-kicker"><span class="sparkle" aria-hidden="true">✳</span><span data-i18n="kicker">برای ذهن‌های کنجکاو</span></p>
+          <h1 data-i18n="headline">ذهنت را به<br>چالش بکش.</h1>
+          <p class="hero-description" data-i18n="description">پشت هر الگو، یک منطق پنهان است. با چند دقیقه تمرکز، مهارت حل مسئله‌ات را کشف کن و از زاویه‌ای تازه به توانایی‌های ذهنت نگاه کن.</p>
+          <div class="hero-actions"><button class="button primary start-trigger"><span data-i18n="start">شروع آزمون رایگان</span><span class="direction-arrow" aria-hidden="true">←</span></button><span class="no-signup" data-i18n="noSignup">بدون ثبت‌نام، بدون دردسر</span></div>
+          <div class="hero-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span data-i18n="questionsCount">۲۰ پرسش</span></span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="duration">۱۵ دقیقه</span></span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span data-i18n="instant">نتیجه فوری</span></span>
+          </div>
+          <button class="resume-link" id="resume-button" hidden><span data-i18n="resume">ادامه آزمون قبلی</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="puzzle-scene">
+          <div class="puzzle-note"><span class="note-dot"></span><span data-i18n="sampleLabel">یک گرم‌کردن کوچک</span></div>
+          <div class="demo-card">
+            <div class="demo-card-heading"><span data-i18n="sampleTitle">جای خالی را پیدا کن</span><span class="tiny-grid" aria-hidden="true">▦</span></div>
+            <div class="demo-matrix" id="demo-matrix" aria-label="الگوی سه در سه" data-i18n-aria="patternGrid"></div>
+            <p class="demo-question" data-i18n="sampleQuestion">کدام شکل، الگو را کامل می‌کند؟</p>
+            <div class="demo-options" id="demo-options" role="group" aria-label="پاسخ‌ها" data-i18n-aria="answers"></div>
+            <p class="demo-feedback" id="demo-feedback" role="status" data-i18n="sampleHint">یک گزینه را انتخاب کن. به تعداد نقطه‌ها دقت کن.</p>
+          </div>
+          <div class="puzzle-caption"><span class="caption-line"></span><span data-i18n="sampleCaption">گاهی فقط باید کمی متفاوت نگاه کرد.</span></div>
+          <svg class="scene-spark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 2v44M2 24h44M8.5 8.5l31 31m-31 0 31-31" stroke="currentColor" stroke-width="3"/></svg>
+        </div>
+      </section>
+
+      <section class="discover wrap" id="discover">
+        <div class="section-heading"><div><p class="section-kicker" data-i18n="discoverKicker">فراتر از یک عدد</p><h2 data-i18n="discoverTitle">یک ذهن، چندین توانایی.</h2></div><p data-i18n="discoverDescription">هوش فقط حساب‌وکتاب نیست.<br>سه مهارت متفاوت را در یک آزمون تجربه کن.</p></div>
+        <div class="ability-grid">
+          <article class="ability-card"><div class="ability-art visual-art" aria-hidden="true"><span></span><span></span><span></span><span></span></div><h3 data-i18n="visual">استدلال تصویری</h3><p data-i18n="visualDescription">رابطه بین شکل‌ها را پیدا کن و قطعه گمشده هر الگو را کشف کن.</p><span class="ability-tag" data-i18n="visualTag">دیدن ارتباط‌های پنهان</span></article>
+          <article class="ability-card"><div class="ability-art logical-art" aria-hidden="true"><span>●</span><span class="art-connector"></span><span>◆</span><span class="art-connector"></span><span>?</span></div><h3 data-i18n="logic">تفکر منطقی</h3><p data-i18n="logicDescription">سرنخ‌ها را کنار هم بگذار، فرض‌ها را بررسی کن و به نتیجه برس.</p><span class="ability-tag" data-i18n="logicTag">ساختن مسیر یک پاسخ</span></article>
+          <article class="ability-card"><div class="ability-art numerical-art" aria-hidden="true"><span>2</span><span>4</span><span>8</span><span>?</span></div><h3 data-i18n="numbers">استدلال عددی</h3><p data-i18n="numbersDescription">نظم میان عددها را تشخیص بده و قدم بعدی دنباله را پیدا کن.</p><span class="ability-tag" data-i18n="numbersTag">کشف نظم در میان عددها</span></article>
+        </div>
+      </section>
+
+      <section class="how-section wrap" id="how-it-works">
+        <div class="how-intro"><p class="section-kicker" data-i18n="howKicker">۱۵ دقیقه برای خودت</p><h2 data-i18n="howTitle">کمی تمرکز.<br>کمی کنجکاوی.</h2><p data-i18n="howDescription">یک جای آرام پیدا کن. بقیه‌اش با ما.</p><button class="text-button start-trigger"><span data-i18n="letsStart">آماده‌ام، شروع کنیم</span><span class="direction-arrow" aria-hidden="true">←</span></button></div>
+        <ol class="steps"><li><span class="step-number">01</span><div><h3 data-i18n="step1Title">با خیال راحت شروع کن</h3><p data-i18n="step1Description">نیازی به ساخت حساب یا اطلاعات شخصی نیست. فقط خودت و یک ذهن آماده.</p></div></li><li><span class="step-number">02</span><div><h3 data-i18n="step2Title">الگوها را دنبال کن</h3><p data-i18n="step2Description">به ۲۰ پرسش پاسخ بده. می‌توانی از یک سوال بگذری و بعد به آن برگردی.</p></div></li><li><span class="step-number">03</span><div><h3 data-i18n="step3Title">از پاسخ‌ها یاد بگیر</h3><p data-i18n="step3Description">امتیاز، عملکرد هر مهارت و توضیح پاسخ‌ها را بلافاصله ببین.</p></div></li></ol>
+      </section>
+
+      <section class="faq-section wrap" id="faq"><div class="faq-intro"><p class="section-kicker" data-i18n="faqKicker">قبل از شروع</p><h2 data-i18n="faqTitle">شاید سوال تو هم باشد.</h2><p data-i18n="faqDescription">چند نکته برای یک تجربه بهتر.</p></div><div class="faq-list">
+        <details><summary data-i18n="faq1">آیا این آزمون، ضریب هوشی واقعی من را مشخص می‌کند؟</summary><p data-i18n="faq1Answer">این آزمون برای تمرین و سرگرمی طراحی شده و امتیاز آن بر اساس پاسخ‌های درست است. اندازه‌گیری معتبر ضریب هوشی به یک آزمون استاندارد و ارزیابی متخصص نیاز دارد.</p></details>
+        <details><summary data-i18n="faq2">اگر پاسخ یک سوال را ندانم چه می‌شود؟</summary><p data-i18n="faq2Answer">می‌توانی از سوال بگذری و تا پایان زمان به آن برگردی. پاسخ اشتباه نمره منفی ندارد؛ هر پاسخ درست یک امتیاز دارد.</p></details>
+        <details><summary data-i18n="faq3">آیا اطلاعات من ذخیره می‌شود؟</summary><p data-i18n="faq3Answer">پیشرفت آزمون فقط در مرورگر خودت ذخیره می‌شود تا بتوانی آن را ادامه بدهی. ما نام، ایمیل یا اطلاعات شخصی از تو نمی‌خواهیم. زمان آزمون پس از شروع همچنان ادامه دارد.</p></details>
+        <details><summary data-i18n="faq4">آیا می‌توانم زبان را وسط آزمون عوض کنم؟</summary><p data-i18n="faq4Answer">بله. همه پرسش‌ها، پاسخ‌ها و توضیح‌ها به فارسی و انگلیسی در دسترس‌اند و تغییر زبان، پاسخ‌های تو را تغییر نمی‌دهد.</p></details>
+      </div></section>
+      <section class="closing-cta wrap"><span class="closing-symbol" aria-hidden="true">✳</span><div><h2 data-i18n="closingTitle">ببین ذهنت چه راهی پیدا می‌کند.</h2><p data-i18n="closingDescription">اولین قدم، فقط یک سوال است.</p></div><button class="button primary start-trigger"><span data-i18n="start">شروع آزمون رایگان</span><span class="direction-arrow" aria-hidden="true">←</span></button></section>
+    </div>
+
+    <section id="quiz-view" class="quiz wrap" hidden aria-labelledby="quiz-title"></section>
+    <section id="result-view" class="results wrap" hidden aria-labelledby="result-title"></section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="brand footer-brand" href="#" id="footer-home"><span data-i18n="brand">ذهن‌آرا</span><span class="brand-dot" aria-hidden="true"></span></a><p data-i18n="footer">جایی برای کنجکاوی، کشف و تمرین ذهن.</p><span class="footer-note" data-i18n="practiceNote">یک تجربه تمرینی، نه ارزیابی بالینی</span></footer>
+  <dialog id="action-dialog" aria-labelledby="dialog-title"><form method="dialog"><button class="dialog-close" value="cancel" aria-label="بستن" data-i18n-aria="close">×</button><div class="dialog-symbol" aria-hidden="true">✳</div><h2 id="dialog-title"></h2><div id="dialog-content"></div><div class="dialog-actions"><button class="button primary" id="dialog-confirm" value="confirm"></button><button class="button secondary" id="dialog-cancel" value="cancel"></button></div></form></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
